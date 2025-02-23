@@ -1,0 +1,21 @@
+# 아래가 없어도, 메모리 모드로 돌림
+#spring:
+#  datasource:
+#    url: jdbc:h2:mem:test
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop # 어플리케이션 내리면서 drop 까지
+#    properties:
+#      hibernate:
+#        show_sql: true
+#        format_sql: true
+
+
+logging.level:
+  org.hibernate.SQL: debug
+  #org.hibernate.type: trace #스프링 부트 2.x, hibernate5
+  org.hibernate.orm.jdbc.bind: trace #스프링 부트 3.x, hibernate6
